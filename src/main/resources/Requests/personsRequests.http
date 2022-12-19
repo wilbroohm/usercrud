@@ -2,7 +2,12 @@ POST http://localhost:8080/person/add
 Content-Type: application/json
 
 {
-  "firstName": "toto",
+  "firstName": "GGGGGG",
   "lastName": "LaLA",
-  "birthday": "1870-03-03"
+  "birthday": "1997-03-03"
 }
+
+####
+GET http://localhost:8080/person/list
+#####
+GET http://localhost:8080/person/byFirsName
