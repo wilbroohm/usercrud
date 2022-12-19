@@ -16,14 +16,26 @@ public class PersonService {
 
     private final PersonRepository personRepository;
 
+    /**
+     * @return List of persons without sort
+     */
     public List<Person> getListOfPersons(){
         return personRepository.findAll();
     }
 
+    /**
+     * @return List of person by FirstName
+     */
     public List<Person> getListOfPersonsOrderedByFirsName(){
         return personRepository.findAllByOrderByFirstName();
     }
 
+    /**
+     * @param person the person data
+     * @return saved data with id
+     * @throws InvalidAgeException If the person age is invalid
+     * @throws ParseException if error occurred during the parsing
+     */
     public Person addPerson(Person person) throws InvalidAgeException, ParseException {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
 
